@@ -26,3 +26,26 @@ function colorShift(activeTabID, selectedBtnId, hideSectionId, showSectionId){
     document.getElementById(showSectionId).classList.remove("hidden");
 
 }
+
+// validation
+function inputValidation(inputID, softwareID, courseID, internetID){
+    const inputText = document.getElementById(inputID).value;
+    const softwareText = document.getElementById(softwareID).value;
+    const coursesText = document.getElementById(courseID).value;
+    const internetText = document.getElementById(internetID).value;
+
+    if (isNaN(inputText) || inputText === '' || inputText < 0) {
+        alert('please enter a correct value');
+        return;
+    }
+    else if (isNaN(softwareText) || softwareText === '' || softwareText < 0) {
+        return alert('please enter a correct value');
+    }
+    else if (isNaN(coursesText) || coursesText === '' || coursesText < 0) {
+        return alert('please enter a correct value');
+    }
+    else if (isNaN(internetText) || internetText === '' || internetText < 0) {
+        return alert('please enter a correct value');
+    }
+    
+}
